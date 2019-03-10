@@ -19,7 +19,7 @@ class App extends Component {
               </ul>
             </div>
             <div className="chatInputBox">
-              <span className="text"></span><span className="caret">a</span>
+              <span className="text">aaaa</span><span className="caret">a</span>
             </div> 
           </div>
         </div>
