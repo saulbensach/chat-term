@@ -1,14 +1,338 @@
-body {
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* line 22, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  font: 1.3rem Inconsolata, monospace;
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 14, ../sass/screen.scss */
+body {
+  background: #111;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+/* line 20, ../sass/screen.scss */
+#switch {
+  display: none;
+}
+
+/* line 23, ../sass/screen.scss */
+.switch-label {
+  display: inline-block;
+  cursor: pointer;
+  background: #fff;
+  color: #111;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 2px #666;
+}
+/* line 34, ../sass/screen.scss */
+.switch-label::after {
+  content: "on";
+}
+/* line 37, ../sass/screen.scss */
+.switch-label::before {
+  content: " ";
+  display: inline-block;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  background: #003321;
+  margin-right: 10px;
+  border: 1px solid #111;
+}
+/* line 47, ../sass/screen.scss */
+.switch-label:active {
+  box-shadow: none;
+  transform: translate3d(0, 2px, 0);
+}
+
+/* line 53, ../sass/screen.scss */
+#switch:checked + .switch-label::before {
+  background: #22ff55;
+}
+/* line 56, ../sass/screen.scss */
+#switch:checked + .switch-label::after {
+  content: "off";
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.172;
+  }
+  5% {
+    opacity: 0.1137;
+  }
+  10% {
+    opacity: 0.32915;
+  }
+  15% {
+    opacity: 0.5766;
+  }
+  20% {
+    opacity: 0.32821;
+  }
+  25% {
+    opacity: 0.42903;
+  }
+  30% {
+    opacity: 0.57808;
+  }
+  35% {
+    opacity: 0.97952;
+  }
+  40% {
+    opacity: 0.12702;
+  }
+  45% {
+    opacity: 0.82401;
+  }
+  50% {
+    opacity: 0.32917;
+  }
+  55% {
+    opacity: 0.34683;
+  }
+  60% {
+    opacity: 0.11891;
+  }
+  65% {
+    opacity: 0.57302;
+  }
+  70% {
+    opacity: 0.16314;
+  }
+  75% {
+    opacity: 0.09808;
+  }
+  80% {
+    opacity: 0.67073;
+  }
+  85% {
+    opacity: 0.85832;
+  }
+  90% {
+    opacity: 0.44902;
+  }
+  95% {
+    opacity: 0.91272;
+  }
+  100% {
+    opacity: 0.47361;
+  }
+}
+/* line 70, ../sass/screen.scss */
+.container {
+  background: #121010;
+  width: 1000px;
+  height: 500px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #666;
+}
+/* line 80, ../sass/screen.scss */
+.container::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  
+}
+/* line 94, ../sass/screen.scss */
+.container::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* line 108, ../sass/screen.scss */
+#switch:checked ~ .container::after {
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes turn-on {
+  0% {
+    transform: scale(1, 0.8) translate3d(0, 0, 0);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+    opacity: 1;
+  }
+  3.5% {
+    transform: scale(1, 0.8) translate3d(0, 100%, 0);
+  }
+  3.6% {
+    transform: scale(1, 0.8) translate3d(0, -100%, 0);
+    opacity: 1;
+  }
+  9% {
+    transform: scale(1.3, 0.6) translate3d(0, 100%, 0);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+    opacity: 0;
+  }
+  11% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: contrast(0) brightness(0);
+    filter: contrast(0) brightness(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: contrast(1) brightness(1.2) saturate(1.3);
+    filter: contrast(1) brightness(1.2) saturate(1.3);
+    opacity: 1;
+  }
+}
+@keyframes turn-off {
+  0% {
+    transform: scale(1, 1.3) translate3d(0, 0, 0);
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.3, 0.001) translate3d(0, 0, 0);
+    -webkit-filter: brightness(10);
+    filter: brightness(10);
+  }
+  100% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: scale(0, 0.0001) translate3d(0, 0, 0);
+    -webkit-filter: brightness(50);
+    filter: brightness(50);
+  }
+}
+/* line 171, ../sass/screen.scss */
+.screen {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* line 176, ../sass/screen.scss */
+#switch ~ .container > .screen {
+  animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: forwards;
+}
+
+/* line 180, ../sass/screen.scss */
+#switch:checked ~ .container > .screen {
+  animation: turn-on 4s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes overlay-anim {
+  0% {
+    visibility: hidden;
+  }
+  20% {
+    visibility: hidden;
+  }
+  21% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+/* line 199, ../sass/screen.scss */
+.overlay {
+  color: #00FF00;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 60px;
+  visibility: hidden;
+  pointer-events: none;
+  
+}
+
+/* line 209, ../sass/screen.scss */
+#switch:checked ~ .container .overlay {
+  animation: overlay-anim 5s linear;
+  animation-fill-mode: forwards;
 }
