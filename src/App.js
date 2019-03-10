@@ -14,8 +14,8 @@ class App extends Component {
           <div className="actualChatContainer">
             <div className="chatTextContainer">
               <ul>
-                <li>Me he dejado la compra en la basura</li>
-                <li>menuda cabeza que tengo bro</li>
+                <li><span className="userReply">&lt; Pedro &gt; </span>Me he dejado la compra en la basura</li>
+                <li><span className="userReply">&lt; Pedro &gt; </span>menuda cabeza que tengo bro</li>
               </ul>
             </div>
             <div className="chatInputBox">
